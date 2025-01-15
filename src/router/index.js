@@ -7,6 +7,7 @@ import Exercise4View from "@/views/Exercise4View.vue";
 import Exercise5View from "@/views/Exercise5View.vue";
 import Exercise6View from "@/views/Exercise6View.vue";
 import Exercise7View from "@/views/Exercise7View.vue";
+import Exercise8View from "@/views/Exercise8View.vue";
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes = [
     path: "/exercise-7",
     name: "exercise-7",
     component: Exercise7View,
+  },
+  {
+    path: "/exercise-8",
+    name: "exercise-8",
+    component: Exercise8View,
   },
 ];
 

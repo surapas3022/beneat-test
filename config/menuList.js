@@ -6,6 +6,7 @@ export const menuList = [
   { name: "Exercise 5", link: "/exercise-5" },
   { name: "Exercise 6", link: "/exercise-6" },
   { name: "Exercise 7", link: "/exercise-7" },
+  { name: "Exercise 8", link: "/exercise-8" },
 ];
 
 export const buttonList = [
