@@ -17,6 +17,14 @@
                     placeholder="Enter name"
                   />
                 </div>
+                <div class="text-right">
+                  <button
+                    @click="removeCard(index)"
+                    class="btn btn-danger text-capitalize"
+                  >
+                    delete
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -58,6 +66,9 @@ export default {
   methods: {
     addNewCard() {
       this.listData.push({ name: "" });
+    },
+    removeCard(index) {
+      this.listData.splice(index, 1);
     },
   },
 };
