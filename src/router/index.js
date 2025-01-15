@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 import Exercise1View from "../views/Exercise1View.vue";
 import Exercise2View from "../views/Exercise2View.vue";
 import Exercise3View from "../views/Exercise3View.vue";
+import Exercise4View from "../views/Exercise4View.vue";
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,11 @@ const routes = [
     path: "/exercise-3",
     name: "exercise-3",
     component: Exercise3View,
+  },
+  {
+    path: "/exercise-4",
+    name: "exercise-4",
+    component: Exercise4View,
   },
 ];
 

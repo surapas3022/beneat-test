@@ -1,6 +1,6 @@
 <template>
   <div
-    id="user-component"
+    id="user-component-props"
     class="my-4 py-3"
     style="background: rgb(238, 238, 238)"
   >
