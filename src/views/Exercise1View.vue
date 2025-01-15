@@ -59,7 +59,7 @@ export default {
   data() {
     return {
       buttonList: buttonList,
-      selectPicked: buttonList[0],
+      selectPicked: [],
     };
   },
   methods: {

@@ -1,7 +1,7 @@
 <template>
-  <div id="exercise-2" class="padding-max-screen">
+  <div id="exercise-2" class="max-width-screen">
     <h2>Register Form (v-model)</h2>
-    <div class="row justify-content-center mt-4" style="padding: 0 10%">
+    <div class="row justify-content-center mt-4">
       <div class="col-md-6 d-flex justify-content-center mb-4">
         <div class="card w-100">
           <div class="card-body">
@@ -164,7 +164,7 @@ export default {
         tel: "",
         address: "",
         gender: "",
-        level: "",
+        level: null,
       };
       this.show = false;
     },
