@@ -6,21 +6,21 @@
         v-model="form.name"
         type="text"
         title="name"
-        id="name"
+        ref="name"
         placeholder="name"
       />
       <FormInput
         v-model="form.age"
         type="text"
         title="age"
-        id="age"
+        ref="age"
         placeholder="age"
       />
       <FormInput
         v-model="form.image"
         type="text"
         title="image"
-        id="image"
+        ref="image"
         placeholder="image"
       />
       <div class="d-flex jutify-content-start">

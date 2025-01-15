@@ -3,6 +3,7 @@ export const menuList = [
   { name: "Exercise 2", link: "/exercise-2" },
   { name: "Exercise 3", link: "/exercise-3" },
   { name: "Exercise 4", link: "/exercise-4" },
+  { name: "Exercise 5", link: "/exercise-5" },
 ];
 
 export const buttonList = [
