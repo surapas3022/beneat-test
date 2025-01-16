@@ -8,6 +8,7 @@ import Exercise5View from "@/views/Exercise5View.vue";
 import Exercise6View from "@/views/Exercise6View.vue";
 import Exercise7View from "@/views/Exercise7View.vue";
 import Exercise8View from "@/views/Exercise8View.vue";
+import checkoutView from "@/views/checkoutView.vue";
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const routes = [
     path: "/exercise-8",
     name: "exercise-8",
     component: Exercise8View,
+  },
+  {
+    path: "/checkout",
+    name: "checkout",
+    component: checkoutView,
   },
 ];
 
