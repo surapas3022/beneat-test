@@ -108,15 +108,25 @@
         </div>
       </div>
     </div>
+    <ModalAlert
+      v-if="isAlert"
+      :show="isAlert"
+      message="Saved data success"
+      @close="handleModalClose"
+      @confirm="handleModalConfirm"
+    />
   </div>
 </template>
 <script>
-import FormInput from "@/components/Materials/InputGroup.vue";
 import axios from "axios";
+
+import FormInput from "@/components/Materials/InputGroup.vue";
+import ModalAlert from "@/components/Materials/ModalAlert.vue";
 
 export default {
   components: {
     FormInput,
+    ModalAlert,
   },
   data() {
     return {
@@ -130,6 +140,7 @@ export default {
         { name: "ปริญญาเอก", val: "ปริญญาเอก" },
       ],
       loading: false,
+      isAlert: false,
     };
   },
   created() {
@@ -160,24 +171,20 @@ export default {
             "Content-Type": "application/json",
           },
         });
-
-        // const formData = new FormData();
-        // Object.entries(this.form).forEach(([key, value]) => {
-        //   formData.append(key, value);
-        // });
-
-        // const response = await axios.put(url, formData, {
-        //   headers: {
-        //     "Content-Type": "multipart/form-data",
-        //   },
-        // });
-        alert("Data Saved Successfully");
+        this.isAlert = true;
         console.log("Data Saved Successfully:", response.data);
       } catch (error) {
+        this.isAlert = false;
         console.error("Error save data:", error);
       } finally {
         this.loading = false;
       }
+    },
+    handleModalClose() {
+      this.isAlert = false;
+    },
+    handleModalConfirm() {
+      this.isAlert = false;
     },
   },
 };
