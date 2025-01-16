@@ -62,7 +62,11 @@
                 <h4>{{ item.name }}</h4>
                 <h4 class="text-danger">{{ item.price }}</h4>
                 <div class="mt-3">
-                  <input class="form-control" v-model="item.qty" type="text" />
+                  <input
+                    class="form-control"
+                    v-model="item.qty"
+                    type="number"
+                  />
                 </div>
                 <div class="mt-2">
                   <button class="btn btn-danger" @click="removeProduct(index)">
@@ -176,6 +180,7 @@ export default {
         existingItem.qty += 1;
         alert(`Added ${existingItem.name} + 1`);
       } else {
+        item.qty = 1;
         this.carts.push(item);
         alert(`Added new ${item.name}`);
       }
